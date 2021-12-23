@@ -24,7 +24,7 @@ db.init().then(() => {
 const gracefulShutdown = () => {
     db.teardown()
         .catch(() => {})
-        .then(() => process.exit());
+        .then(() => process.exit()); 
 };
 
 process.on('SIGINT', gracefulShutdown);
